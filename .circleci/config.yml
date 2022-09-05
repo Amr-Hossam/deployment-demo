@@ -30,8 +30,7 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-              # You can get this ID in the section where you registered the SSH Key
-              fingerprints: ["22:76:17:dc:63:16:05:88:cc:d4:35:69:e9:51:f3:12"] 
+          fingerprints: ["22:76:17:dc:63:16:05:88:cc:d4:35:69:e9:51:f3:12"] 
       - run:
           name: Install Ansible
           command: |
@@ -39,7 +38,7 @@ jobs:
       - run:
           name: ls-la root
           command: |
-            ls -la ~/.ssh/
+            ls -la ~/.ssh/id_rsa.pub
       - run:
           name: Run Playbook and Configure server
           command: |
