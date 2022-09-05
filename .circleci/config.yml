@@ -39,7 +39,7 @@ jobs:
       - run:
           name: ls-la root
           command: |
-            ls -la ~/
+            ls -la ~/.ssh/
       - run:
           name: Run Playbook and Configure server
           command: |
