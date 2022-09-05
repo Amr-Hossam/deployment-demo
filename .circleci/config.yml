@@ -38,7 +38,7 @@ jobs:
       - run:
           name: ls-la root
           command: |
-            ls -la ~/.ssh/known_hosts
+            ls -la ~/.ssh/
       - run:
           name: Run Playbook and Configure server
           command: |
