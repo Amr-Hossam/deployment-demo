@@ -39,7 +39,7 @@ jobs:
       - run:
           name: Run Playbook and Configure server
           command: |
-            ansible-playbook playbook-config.yml -i inventory.txt --private-key ~/mykey.pem 
+            ansible-playbook playbook-config.yml -i inventory.txt  
 
 
 
