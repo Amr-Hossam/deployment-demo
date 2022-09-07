@@ -48,8 +48,10 @@ jobs:
       - run:
           name: Install Ansible
           command: |
-            /usr/local/bin/python -m pip install --upgrade pip
-            python -m pip install ansible
+            curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            unzip awscliv2.zip
+            sudo ./aws/install
+            python3 -m pip install --user ansible
       - run:
           name: Run Playbook and Configure server
           command: |
