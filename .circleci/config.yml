@@ -52,6 +52,7 @@ jobs:
             pip install --upgrade pip
             python3 -m pip install ansible
             ansible --version
+            apk add openssh-client
             
       - run:
           name: Run Playbook and Configure server
