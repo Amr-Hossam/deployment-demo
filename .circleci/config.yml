@@ -49,8 +49,9 @@ jobs:
           name: Install Ansible
           command: |
             apk add --no-cache aws-cli
-            pip install --upgrade pip
+            pip install --upgrade pip --root-user-action=ignore
             python3 -m pip install ansible
+            ansible --version
             
       - run:
           name: Run Playbook and Configure server
